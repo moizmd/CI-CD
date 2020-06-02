@@ -9,7 +9,7 @@ spec:
   replicas: 2
   template:
     metadata:
-	  name: web-pod
+      name: web-pod
       labels:
         app: web-deployment
     spec:
