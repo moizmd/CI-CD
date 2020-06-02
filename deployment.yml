@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: web-deployment
-  replicas: 2
+  replicas: 4
   template:
     metadata:
       name: web-pod
