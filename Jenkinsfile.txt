@@ -78,7 +78,7 @@ pipeline {
               sh "chmod +x replace.sh"
 	      sh "./replace.sh ${DOCKER_TAG}"
                 sshagent(['k8s']) {	      
-		   sh "scp -o StrictHostKeyChecking=no services.yml changed-pod.yml services.yml prithdileep@104.154.78.159:/home/prithdileep"
+		   sh "scp -o StrictHostKeyChecking=no services.yml changed-deploy.yml services.yml prithdileep@104.154.78.159:/home/prithdileep"
 		script{
 			sh "ssh prithdileep@104.154.78.159 kubectl delete all --all"
 		try{
